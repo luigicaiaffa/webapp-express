@@ -1,10 +1,11 @@
-// # Configurazione
+// # Config
 const express = require("express");
 const router = express.Router();
 
-// homepage
+// Homepage
 router.get("/", (req, res) => {
   res.json({
+    server: "movies_db",
     status: "OK",
   });
 });
