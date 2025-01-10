@@ -1,8 +1,11 @@
 // # Config
 const express = require("express");
 const app = express();
-const domain = `localhost`;
-const port = 3000;
+
+require("dotenv").config();
+
+const domain = process.env.HOST_DOMAIN;
+const port = process.env.HOST_PORT;
 
 // # Middlewares
 const errorsHandler = require("./middlewares/errorsHandler");
