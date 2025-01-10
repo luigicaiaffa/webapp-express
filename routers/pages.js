@@ -5,7 +5,7 @@ const router = express.Router();
 // Homepage
 router.get("/", (req, res) => {
   res.json({
-    server: "movies_db",
+    title: "movies_db",
     status: "OK",
   });
 });

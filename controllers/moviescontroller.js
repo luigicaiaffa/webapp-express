@@ -22,7 +22,7 @@ function show(req, res) {
   const id = parseInt(req.params.id);
 
   const moviesSql = `SELECT * FROM movies WHERE id = ?`;
-
+  
   const reviewsSql = `
     SELECT 
 	    reviews.id,
@@ -42,7 +42,7 @@ function show(req, res) {
     }
 
     if (moviesResults.length === 0) {
-      return res.status(404).json({ error: "Post not found" });
+      return res.status(404).json({ error: "Movie not found" });
     }
 
     const movie = moviesResults[0];
