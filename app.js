@@ -9,8 +9,10 @@ app.use(express.static("public"));
 app.use(express.json());
 
 // # Routes
+const pagesRouter = require(`./routers/pages`);
 const moviesRouter = require(`./routers/movies`);
 
+app.use(`/`, pagesRouter);
 app.use(`/movies`, moviesRouter);
 
 // # Listening
