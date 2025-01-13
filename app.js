@@ -1,5 +1,6 @@
 // # Config
 const express = require("express");
+const cors = require("cors");
 const app = express();
 
 require("dotenv").config();
@@ -12,6 +13,7 @@ const errorsHandler = require("./middlewares/errorsHandler");
 const notFound = require("./middlewares/notFound");
 app.use(express.static("public"));
 app.use(express.json());
+app.use(cors());
 
 // # Routes
 const pagesRouter = require(`./routers/pages`);
